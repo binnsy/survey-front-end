@@ -11,7 +11,7 @@ body {
   z-index: -1;
   width: 100%;
   height: 100%;
-  background-image: url("public/road-choice.jpg");
+  background-image: url("public/paper.jpeg");
   background-size: cover;
   background-position: center;
   opacity: 0.95;
@@ -111,6 +111,8 @@ h6 {
 
 .handlebars-card, .handlebars-card-owned {
   display: grid;
+  margin: 10px;
+  max-width: 31%;
   grid-template-rows: auto auto 0px;
 }
 

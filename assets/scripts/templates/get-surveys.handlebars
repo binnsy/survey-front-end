@@ -16,7 +16,7 @@
 
     <div class="collapse sub-card" id="collapse-buttons-{{survey._id}}">
       <div class="container" >
-        <button type="button" class="btn btn-primary" data-id="{{survey._id}}" data-toggle="modal" data-target=".modal[data-id='{{survey._id}}']">Update</button>
+        <button type="button" class="btn btn-info" data-id="{{survey._id}}" data-toggle="modal" data-target=".modal[data-id='{{survey._id}}']">Update</button>
         <button type="button" class="btn btn-dark" data-id="{{survey._id}}">Delete</button>
       </div>
     </div>
@@ -41,7 +41,7 @@
               <input type="text" class="form-control validate survey-update" name="survey[answer]" placeholder="Answer 1: {{survey.one.title}}">
               <input type="text" class="form-control validate survey-update" name="survey[answer2]" placeholder="Answer 2: {{survey.two.title}}">
 
-              <button class="modal-footer btn btn-warning update" type="submit">Confirm</button>
+              <button class="modal-footer btn btn-info update" type="submit">Confirm</button>
             </form>
           </div>
         </div>

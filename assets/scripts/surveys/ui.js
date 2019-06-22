@@ -12,11 +12,11 @@ const failure = () => {
   $('.user-message').text('Sorry, something went wrong. Please try again.')
 }
 
-const onCreateSurveySuccess = function(response) {
+const onCreateSurveySuccess = function (response) {
   store.survey = response.survey
   $('.collapse').collapse('hide')
   $('.user-message').text('You have successfully created a survey!')
-  $('#create-survey .input-reset').val("")
+  $('#create-survey .input-reset').val('')
 }
 
 const onUpdateSurveySuccess = (response) => {

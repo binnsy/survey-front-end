@@ -1,5 +1,5 @@
 {{#each surveys as |survey|}}
-  <div class="card col-md-4 handlebars-card">
+  <div class="card col-md-4 handlebars-card-all">
 
     <div class="card-header" data-target="{{survey._id}}">
       <section>
@@ -7,24 +7,24 @@
         <br>
         <div class="handlebars-q-and-a">
           <h6>Would you rather:</h6>
-          <br>
+          <div class="titles">
           <p>{{survey.one.title}}</p>
           <p class="or">-or-</p>
           <p>{{survey.two.title}}</p>
+        </div>
         </div>
       </section>
     </div>
     <div class="surveyResponse" data-id="{{survey._id}}">
 
-      <button type="submit" data-id="{{survey.one._id}}" value="{{survey.one.title}}" name="{{survey._id}}" data-count="{{survey.one.count}}"class="btn btn-primary survey-answer-1">{{survey.one.title}}</button>
-      <button type="submit" data-id="{{survey.two._id}}" value="{{survey.two.title}}" name="{{survey._id}}" data-count="{{survey.two.count}}"class="btn btn-primary survey-answer-2">{{survey.two.title}}</button>
+      <button type="submit" data-id="{{survey.one._id}}" value="{{survey.one.title}}" name="{{survey._id}}" data-count="{{survey.one.count}}"class="btn survey-btn btn-a1 survey-answer-1">{{survey.one.title}}</button>
+      <button type="submit" data-id="{{survey.two._id}}" value="{{survey.two.title}}" name="{{survey._id}}" data-count="{{survey.two.count}}"class="btn survey-btn btn-a2 survey-answer-2">{{survey.two.title}}</button>
 
       <div class="displayResults">
-        <br>
-        {{survey.one.title}} = <span class="voteOneCount">{{survey.one.count}}</span> votes
-        <br>
-        {{survey.two.title}} = <span class="voteTwoCount">{{survey.two.count}}</span> votes
-        <br>
+
+
+          <div class="chart-wrapper"><canvas id="bar-chart-{{survey.one.title}}" width="100%" height="30px"></canvas></div>
+
       </div>
 
     </div>

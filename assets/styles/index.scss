@@ -20,14 +20,18 @@ body {
   bottom: 0;
   right: 0;
 }
-
+.displayResults {
+  background-color: white;
+  padding: 2px;
+  margin-top: 5px;
+}
 h1, .user-message {
   color: #fff;
   font-weight: bold;
 }
 
 h1 {
-  font-family: 'Stylish', sans-serif;
+  // font-family: 'Stylish', sans-serif;
   margin-top: 1rem;
   font-size: 3rem;
   text-shadow:
@@ -39,23 +43,23 @@ h1 {
 
 h2 {
   font-size: 2.25rem;
-  font-family: 'Stylish', sans-serif;
+  // font-family: 'Stylish', sans-serif;
   font-weight: bold;
 }
 
 h5 {
-  font-family: 'Stylish', sans-serif;
+  // font-family: 'Stylish', sans-serif;
   font-weight: bold;
 }
 
 h6 {
   font-size: 1.5rem;
-  font-family: "Kalam", cursive;
+  // font-family: "Kalam", cursive;
   font-weight: bold;
 }
 
 .user-message {
-  font-family: 'Stylish', sans-serif;
+  // font-family: 'Stylish', sans-serif;
   font-weight: bold;
   font-size: 1.25rem;
   margin-bottom: 1rem;
@@ -64,10 +68,17 @@ h6 {
 .fa-bars {
   color: #fff;
 }
-
+.titles {
+  border: 1px solid;
+  font-size: 19px;
+  background-color: #3a5e7bad;
+  padding-top: 5px;
+}
 .btn {
-  font-family: "Kalam", cursive;
+  // font-family: "Kalam", cursive;
   font-weight: bold;
+  border-color: white;
+  margin: 2px;
 }
 
 .btn-primary {
@@ -92,7 +103,8 @@ h6 {
 }
 
 .update-header {
-  background-color: #2a8214;
+  background-color: #39597d;
+  color: white;
 }
 
 .modal-title {
@@ -113,16 +125,31 @@ h6 {
   display: grid;
   margin: 10px;
   max-width: 31%;
-  grid-template-rows: auto auto 0px;
 }
 
+.card {
+  margin: 10px;
+  max-width: 31%;
+  background-image: url("public/chalkboard.jpg");
+  padding: 5px;
+  // background-color: rgba(163, 228, 215, .9)
+  grid-template-rows: auto auto 0px;
+}
 .handlebars-card-owned {
   cursor: pointer;
 }
-
+.btn-a2 {
+  background-color: #74a7e0;
+  color: white;
+}
+.btn-a1 {
+  background-color: #39597d;
+  color: white;
+}
 .card-header {
   background-color: transparent;
   border-bottom: 0;
+  color: white;
 }
 
 .card-body {
@@ -135,7 +162,7 @@ h6 {
 }
 
 .handlebars-q-and-a {
-  color: black;
+  color: white;
   word-break: break-all;
 }
 

@@ -22,8 +22,9 @@ let chartUpdate = (surveys) => {
   console.log('++++========+++')
   console.log(store)
   console.log('+++========++++')
-
+  // console.log('hello Ben')
   surveys.forEach(survey => {
+
     surveyChart = new Chart(document.getElementById(`bar-chart-${survey.one.title}`), {
 
       type: 'horizontalBar',

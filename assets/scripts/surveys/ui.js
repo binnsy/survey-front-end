@@ -61,7 +61,7 @@ const onGetAllSurveysSuccess = (data) => {
   // console.log(one.votedCount)
   // console.log('ooooooooo')
   // console.log(votedCount)
-  $('#see-all-survey-content').on('click', '.survey-btn', function () {
+  $('#see-all-survey-content').on('click', '.survey-btn', function() {
     // console.log('we need to show here')
     // console.log('data on click:', data)
     // console.log(store.voteOneCount)
@@ -114,7 +114,7 @@ const onGetAllSurveysSuccess = (data) => {
 
   store.surveys = data.surveys
   // chartUpdate(store.surveys)
-  console.log(data.surveys)
+
 
   // $(".progress-bar").css("width", i + "%").text(i + " %");
   //

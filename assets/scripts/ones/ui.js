@@ -1,22 +1,16 @@
 const store = require('../store.js')
 const two = require('../twos/events.js')
 const api = require('./api.js')
-const ui = require('../surveys/ui.js')
-const sur = require('../surveys/api.js')
 const Chart = require('chart.js')
 const chartUpdate = require('../lib/chart')
 const surveyChart = require('../lib/chart')
 // const surveyEvents = require('../surveys/events.js')
 
 const onCreateOneSuccess = (response) => {
-//   store.one = response.one
-//   two.onCreateTwo()
-// }
   store.one = response.one
-  sur.createSurvey()
-    .then(ui.onCreateSurveySuccess)
-    .catch(ui.failure)
+  two.onCreateTwo()
 }
+// }has been blocked by CORS policy: The 'Access-Control-Allow-Origin' header has a value
 const failure = (response) => {
   $('.user-message').text('Sorry, something went wrong. Please try again.')
 }

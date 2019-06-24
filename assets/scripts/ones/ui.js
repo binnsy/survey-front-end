@@ -4,13 +4,11 @@ const api = require('./api.js')
 const Chart = require('chart.js')
 const chartUpdate = require('../lib/chart')
 const surveyChart = require('../lib/chart')
-// const surveyEvents = require('../surveys/events.js')
 
 const onCreateOneSuccess = (response) => {
   store.one = response.one
   two.onCreateTwo()
 }
-// }has been blocked by CORS policy: The 'Access-Control-Allow-Origin' header has a value
 const failure = (response) => {
   $('.user-message').text('Sorry, something went wrong. Please try again.')
 }
@@ -31,45 +29,19 @@ const votedCount = (response) => {
   store.voteOneCount = response.one.count
   // console.log('store voteOneCount', store.voteOneCount)
   let idOne = response.one._id
-  // $('#see-all-survey-content').click(function () {
-  //   chart.data.data[0] = store.voteOneCount
-  // })
-  // chart.render()
   let survey = store.surveys.find(function (survey) {
     return survey.one._id === idOne
   })
 
-
   survey.one.count = response.one.count
-  console.log('survey 1: ', survey)
-  console.log('survey.one.count in ones.ui: ', survey.one.count)
-  console.log('+++++++')
-  // if (myChart) {
-  //   myChart.destroy()
-  // }
-  // if (surveyChart) {
-  //   surveyChart.destroy()
-  // }
-  // if (window.surveyChart !== undefined || window.surveyChart !== null) {
-  //   console.log('hi')
-  // window.surveyChart.destroy()
-  if (surveyChart !== undefined || surveyChart !== null) {
-    console.log('hi')
-  }
+  // console.log('survey 1: ', survey)
+  // console.log('survey.one.count in ones.ui: ', survey.one.count)
+  // console.log('+++++++')
 
-  // $('#chart-wrapper').empty()
-//   document.getElementById("chart-wrapper").innerHTML = '&nbsp;'
-// document.getElementById("chart-wrapper").innerHTML = '<canvas id="bar-chart bar-chart-{{survey.one.title}}" width="100%" height="30px"></canvas>'
-// let chartUpdate = document.getElementById("bar-chart").getContext("2d")
+  if (surveyChart !== undefined || surveyChart !== null) {
+  }
   chartUpdate(store.surveys)
 }
-// const updateChart1 = (Chart) => {
-//   Chart.data.datasets.data[0] = 1
-//   Chart.update()
-// }
-
-
-
 
 module.exports = {
   onCreateOneSuccess,

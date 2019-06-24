@@ -121,7 +121,9 @@ p {
 .modal-title {
   font-size: 2rem;
 }
-
+.modal-open {
+  overflow: scroll;
+}
 #my-survey-content {
   margin: 1rem auto;
   // width: 75%;

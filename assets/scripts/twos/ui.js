@@ -41,20 +41,10 @@ const votedCount = (response) => {
   })
 
   survey.two.count = response.two.count
-  console.log('survey 2:', survey)
-  console.log('survey.two.count in twos.ui: ', survey.two.count)
+  // console.log('survey 2:', survey)
+  // console.log('survey.two.count in twos.ui: ', survey.two.count)
 
-  // if (chartUpdate) {
-  //   chartUpdate.destroy()
-  // }
-//   if (surveyChart) {
-//     surveyChart.destroy()
-// }
-  // $('#chart-wrapper').empty()
-  // chartUpdate.destroy()
-  // surveyChart.destroy()
   if (surveyChart !== undefined || surveyChart !== null) {
-    console.log('hi')
   }
   // Chart.destroy()
   chartUpdate(store.surveys)

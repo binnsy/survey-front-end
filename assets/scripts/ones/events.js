@@ -8,7 +8,7 @@ const create = (event) => {
   event.preventDefault()
   const data = getFormFields(event.target)
   store.survey = data.survey
-  console.log(data)
+  // console.log(data)
   onCreateOne()
 }
 
@@ -41,10 +41,10 @@ const onVotedOne = (event) => {
   count += 1
   store.count = count
 
-  let countOne = $(event.target).siblings('.displayResults').children('.voteOneCount').text(count)
-  console.log('count one:', countOne)
+  const countOne = $(event.target).siblings('.displayResults').children('.voteOneCount').text(count)
+  // console.log('count one:', countOne)
   store.countOne = countOne
-  console.log(store.countOne)
+  // console.log(store.countOne)
 
   api.votedOne(id, count)
     .then(ui.onVotedSuccess)

@@ -29,7 +29,10 @@ h1, .user-message {
   color: #2c79b7;
   font-weight: bold;
 }
-
+// .col-md-4 {
+//     flex: 0 0 33.33333%;
+//     max-width: 30.33333%;
+// }
 h1 {
   // font-family: 'Stylish', sans-serif;
   margin-top: 1rem;
@@ -41,7 +44,10 @@ h1 {
   //   -1px 1px 0 #000,
   //   1px 1px 0 #000;
 }
-
+// handlebars-card-all {
+//   flex: 0 0 33.33333%;
+//   max-width: 30%
+// }
 h2 {
   font-size: 2.25rem;
   // font-family: 'Stylish', sans-serif;
@@ -130,11 +136,11 @@ h6 {
 
 .card {
   margin: 10px;
-  max-width: 31%;
+  // max-width: 31%;
   background-image: url("public/chalkboard.jpg");
   padding: 5px;
   // background-color: rgba(163, 228, 215, .9)
-  grid-template-rows: auto auto 0px;
+  grid-template-rows: auto auto 2px;
 }
 .handlebars-card-owned {
   cursor: pointer;
